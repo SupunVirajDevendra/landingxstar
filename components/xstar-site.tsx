@@ -94,5 +94,42 @@ export default function XstarSite() {
     return () => observer.disconnect()
   }, [])
 
-  return <main className="xstar-site"><Hero /><Awards /><Services /><Portfolio /><Team /><Testimonial /><Journal /><Footer /></main>
+  return <main className="xstar-site">
+    <div className="electric-atmosphere" aria-hidden="true">
+      <span className="ambient-orb ambient-orb-one" />
+      <span className="ambient-orb ambient-orb-two" />
+      <span className="ambient-orb ambient-orb-three" />
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="electric-silver" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+            <stop offset="45%" stopColor="#dce8f0" stopOpacity=".9" />
+            <stop offset="75%" stopColor="#ffffff" stopOpacity=".35" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+          </linearGradient>
+          <filter id="electric-glow" x="-20%" y="-50%" width="140%" height="200%">
+            <feGaussianBlur stdDeviation="5" />
+          </filter>
+        </defs>
+        <g className="electric-line-glow" filter="url(#electric-glow)">
+          <path d="M-80 155 L110 155 L170 122 L300 122 L352 190 L500 190 L568 135 L710 135 L770 176 L930 176 L1010 112 L1160 112 L1218 164 L1520 164" />
+          <path d="M-80 670 L120 670 L182 714 L310 714 L374 650 L520 650 L586 708 L740 708 L815 635 L970 635 L1030 694 L1195 694 L1260 648 L1520 648" />
+        </g>
+        <g className="electric-lines">
+          <path className="electric-line electric-line-one" d="M-80 155 L110 155 L170 122 L300 122 L352 190 L500 190 L568 135 L710 135 L770 176 L930 176 L1010 112 L1160 112 L1218 164 L1520 164" />
+          <path className="electric-line electric-line-two" d="M-80 670 L120 670 L182 714 L310 714 L374 650 L520 650 L586 708 L740 708 L815 635 L970 635 L1030 694 L1195 694 L1260 648 L1520 648" />
+          <path className="electric-line electric-line-three" d="M-80 420 L180 420 L240 382 L420 382 L486 452 L650 452 L706 405 L860 405 L930 468 L1080 468 L1142 410 L1520 410" />
+        </g>
+        <g className="electric-nodes">
+          <circle cx="352" cy="190" r="3" />
+          <circle cx="770" cy="176" r="3" />
+          <circle cx="374" cy="650" r="3" />
+          <circle cx="815" cy="635" r="3" />
+          <circle cx="706" cy="405" r="3" />
+          <circle cx="1142" cy="410" r="3" />
+        </g>
+      </svg>
+    </div>
+    <Hero /><Awards /><Services /><Portfolio /><Team /><Testimonial /><Journal /><Footer />
+  </main>
 }
